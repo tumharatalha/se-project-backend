@@ -5,16 +5,32 @@ const Schema = mongoose.Schema;
 
 const paintsSchema = new Schema(
   {
-    paintBrand: {
+    brandName: {
       type: String,
       required: true,
     },
-    paintColour: {
+    paintName: {
       type: String,
       required: false,
     },
     hexCode: {
       type: String,
+      required: true,
+    },
+    paintPriceRange: {
+      type: Number,
+      required: true,
+    },
+    paintSize: {
+      type: Number,
+      required: true,
+    },
+    paintColours: {
+      type: String,
+      required: true,
+    },
+    paintQty: {
+      type: Number,
       required: true,
     },
   },

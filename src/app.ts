@@ -1,6 +1,7 @@
 /** @format */
 
 import express from "express";
+import cors from "cors";
 import { signIn } from "./routes/auth/sign-in";
 import bodyParser from "body-parser";
 import { signUp } from "./routes/auth/sign-up";
@@ -19,6 +20,7 @@ mongoose
     console.log("connected to db");
     var jsonParser = bodyParser.json();
     app.use(jsonParser);
+    app.use(cors());
     const port = 3000;
     signIn(app);
     signUp(app);
